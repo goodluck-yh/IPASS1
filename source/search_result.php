@@ -7,6 +7,13 @@
 </head>
 <body>
 <?php
+    session_start();
+    if($_SESSION["flag"] == false){
+        echo "<script>alert('Please go to search page!');
+        location.href='search.php';
+        document.onmousedown=click;
+        </script>";
+    }
     require_once "menu.php";
     require_once "includes/db.fun.inc.php";
     db_connect();

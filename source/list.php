@@ -8,6 +8,7 @@
 <body>
 <?php
 session_start();
+$_SESSION["flag"] = false;
 require_once "menu.php";
 require_once "includes/db.fun.inc.php";
 $route_no = $_GET["flight"];

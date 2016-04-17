@@ -8,6 +8,8 @@
 </head>
 <body>
 <?php
+    session_start();
+    $_SESSION["flag"] = true;
     require_once "menu.php";
 ?>
     <div class="searchdiv">

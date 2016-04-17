@@ -7,8 +7,15 @@
 </head>
 <body>
 <?php
+    session_start();
     require_once "menu.php";
     require_once "includes/db.fun.inc.php";
+    if($_SESSION["flag"] == false){
+        echo "<script>alert('Please go to search page!');
+            location.href='search.php';
+            document.onmousedown=click;
+            </script>";
+    }
     $route_no = $_GET["flight"];
     //$route_no = 1;
     db_connect();
